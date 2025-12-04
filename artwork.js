@@ -32,7 +32,7 @@ function renderArt() {
 }
 
 function homePage() {
-    window.location.href = `${window.location.origin}/index.html`
+    window.location.href = "https://tea-eraspillsthecode.github.io/getting-intimate-with-JS/#"
 }
 
 function filterArt(event) {
