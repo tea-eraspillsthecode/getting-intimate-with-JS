@@ -12,7 +12,7 @@ function loadingState() {
 }
 
 function showUserArt() {
-    window.location.href = `${window.location.origin}/artwork.html`
+    window.location.href = `${window.location.origin}/getting-intimate-with-JS/artwork.html`
 }
 
 function notifyUser() {
