@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9959d4d55d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="artwork.js" defer></script>
+    <title>Art Gallery</title>
+</head>
+<body>
+<div class="bg__img">
+    <nav id="landing-two">
+        <div class="row nav__row">
+            <div class="nav__logo">
+                <figure class="nav__logo--img-wrapper">
+                    <img class="nav__logo--img" src="assets/BBlogo__transparent.png" alt="">
+                </figure>
+                <p class="nav__logo--title nav__logo--title-two">BLATHERS' BURROW</p>
+            </div>
+            <ul class="nav__links">
+                <li class="nav__link">
+                    <a class="nav__link--anchor link__hover-effect link__hover-effect--white nav__link--anchor-two" onclick="homePage()" href="#"><span class="text--brown">Home</span></a>
+                </li>
+                <li class="nav__link">
+                    <a class="nav__link--anchor link__hover-effect link__hover-effect--white nav__link--anchor-two" href="#">Find Cool Art</a>
+                </li>
+                <li class="nav__link">
+                    <a class="nav__link--anchor nav__link--anchor-primary nav__link--primary-two" onclick="notifyUser()" href="#">Review Us</a>
+                </li>
+            </ul>
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu-close" onclick="closeMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <ul class="menu__links--list">
+                    <li class="menu__link">
+                        <a class="menu__link--anchor link__hover-effect" onclick="homePage()" href="#">Home</a>
+                    </li>
+                    <li class="menu__link">
+                        <a class="menu__link--anchor link__hover-effect" onclick="closeMenu()" href="#">Find Cool Art</a>
+                    </li>
+                    <li class="menu__link">
+                        <a class="menu__link--anchor menu__link--anchor-primary" onclick="closeMenu()" href="#">Review Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="welcome-two">
+        <div class="container header__container">
+            <div class="row row__column">
+                <h2 class="header__title">Take a look around.</h2>
+                <div class="input--wrapper-two">
+                    <input class="input-two" type="text" placeholder="Ex: Twinkling painting" onchange="onSearchChange(event)"></input>
+                    <button class="btn-two">
+                        <i class="fa-solid fa-magnifying-glass search__btn"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+    <main>
+        <section id="artwork">
+            <div class="container">
+                <div class="row">
+                    <div class="artwork__filter--feature">
+                        <h3 class="filter__title">Catalogue Results:</h3>
+                        <select id="filter" onchange="filterArt(event)">
+                            <option value="" disabled selected >Sort</option>
+                            <option value="All">All</option>
+                            <option value="Painting">Paintings</option>
+                            <option value="Statue">Statues</option>
+                        </select>
+                    </div>
+                    <div class="artwork__loading-state">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+                    <div class="no-results__page">
+                        <h2 class="no-results__title">No results found. Please try again.</h2>
+                        <h3 class="no-results__sub-title"><i>Make sure your search matches the name of the artwork.</i></h3>
+                    </div>
+                    <div class="artwork__list">
+                        <div class="artwork">
+                            <div class="art__card hidden">
+                                <figure class="art__img--wrapper">
+                                    <img class="art__img" src="https://dodo.ac/np/images/f/f6/Academic_Painting_NH_Texture.png" alt="">
+                                </figure>
+                                <div class="art__info">
+                                    <h2 class="art__title"><span class="text--blue">Academic painting</span></h2>
+                                    <h3 class="art__sub-title">"Vitruvian Man"</h3>
+                                    <p class="art__introduction">
+                                        <i>Made in circa 1487 by Leonardo da Vinci, this is a <span class="text--lowercase">pen and ink on paper painting</span>.</i>
+                                    </p>
+                                    <p class="art__description">
+                                        <i>This drawing is based on the "ideal" human-body ratio, as stated in "De architectura." 
+                                            "De architectura" was a treatise by Vitruvius, an architect from the early 1st century BCE.</i>
+                                    </p>
+                                    <div class="art__value">
+                                        <button class="btn__art buy__btn">
+                                            <i class="fa-solid fa-sack-dollar"></i>
+                                            BUY: 4980 Bells
+                                        </button>
+                                        <button class="btn__art sell__btn">
+                                            <i class="fa-solid fa-sack-dollar"></i>
+                                            SELL: 1245 Bells
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
