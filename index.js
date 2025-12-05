@@ -16,8 +16,7 @@ function rerouteToArtworkPage() {
   const loading = document.querySelector(".btn__overlay--loading");
   loading.classList.add("btn__overlay--visible");
 
-  window.location.href = `${window.location.origin}
-  /getting-intimate-with-JS/artwork.html?search=${encodeURIComponent(searchValue)}`;
+  window.location.href = `${window.location.origin}/getting-intimate-with-JS/artwork.html?search=${encodeURIComponent(searchValue)}`;
 }
 
 function showUserArt() {
