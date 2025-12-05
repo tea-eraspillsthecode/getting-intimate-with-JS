@@ -362,7 +362,6 @@ LANDING PAGE
     z-index: 1;
     opacity: 1;
     visibility: visible;
-    cursor: not-allowed;
 }
 
 .fa-spinner {
