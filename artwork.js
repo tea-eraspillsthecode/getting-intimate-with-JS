@@ -67,14 +67,16 @@ function filterArt(event) {
 function onSearchChange(event) {
   let name = "";
   if (!searchQueryFromParams) {
-    name = event.target.value.toLowerCase();
+    name = event.target.value.toLowerCase().trim();
   } else {
-    name = searchQueryFromParams.toLowerCase();
+    name = searchQueryFromParams.toLowerCase().trim();
   }
 
-  searchResult = artData.filter(
-    (item) =>
-      item.name.toLowerCase() === name || item.art_name.toLowerCase() === name
+  searchResult = artData.filter((item) => {
+    let searchValue = event.target.value.toLowerCase().trim();
+
+    return (item.name.toLowerCase().includes(searchValue) || item.art_name.toLowerCase().includes(searchValue));
+  }
   );
 
   artworkListEl.innerHTML = searchResult.map((art) => artHTML(art)).join("");

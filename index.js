@@ -9,7 +9,7 @@ function closeMenu() {
 }
 
 function onSearchChange(event) {
-  searchValue = event.target.value.toLowerCase();
+  searchValue = event.target.value.toLowerCase().trim();
 }
 
 function rerouteToArtworkPage() {
