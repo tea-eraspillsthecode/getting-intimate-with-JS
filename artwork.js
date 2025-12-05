@@ -49,7 +49,7 @@ function filterArt(event) {
   let filteredArr = searchResult.length > 0 ? searchResult : artData;
 
   if (type !== "All") {
-    filteredArr = searchResult.filter((item) => {
+    filteredArr = filteredArr.filter((item) => {
       return item.art_type === type;
     });
   }
