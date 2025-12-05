@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html { 
+    scroll-behavior: smooth;
+}
+
 li {
     list-style-type: none;
 }
@@ -687,6 +691,46 @@ ART SELECTION
 
 .no-results__sub-title {
     font-size: 16px;
+}
+
+/*  
+
+ART PAGE  
+
+*/
+
+#footer-primary,
+#footer-two {
+    background-color: #754d3e;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__link--anchor {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 32px;
+    letter-spacing: 1px;
+}
+
+.footer__copyright {
+    color: #242424;
+    font-size: 16px;
+    font-weight: 500;
+    /* text-align: center; */
+    margin-top: 32px;
 }
 
 /* 
