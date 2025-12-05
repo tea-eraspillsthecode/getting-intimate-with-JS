@@ -46,9 +46,8 @@ function homePage() {
 function filterArt(event) {
   const type = event.target.value;
 
-  let filteredArr = searchResult;
+  let filteredArr = searchResult.length > 0 ? searchResult : artData;
 
-  if (searchResult.length === 0) return;
   if (type !== "All") {
     filteredArr = searchResult.filter((item) => {
       return item.art_type === type;
@@ -56,7 +55,7 @@ function filterArt(event) {
   }
 
   if (filteredArr.length === 0) {
-    noResults.classList += " no-results__page--visible";
+    noResults.classList.add("no-results__page--visible");
     artworkListEl.innerHTML = "";
     return;
   } else {
