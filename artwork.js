@@ -4,6 +4,9 @@
 const artworkListEl = document.querySelector(".artwork__list");
 const loadingPage = document.querySelector(".artwork__loading-state");
 const noResults = document.querySelector(".no-results__page");
+const input = document.querySelector(".input-two");
+const params = new URLSearchParams(window.location.search);
+let searchQueryFromParams = params.get("search");
 
 let artData = [];
 let searchResult = [];
@@ -20,9 +23,14 @@ async function main() {
   artData = await art.json();
 
   setTimeout(() => {
-    renderArt(artData);
-    loadingPage.classList.remove("artwork__loading-state--visible");
+    if (searchQueryFromParams) {
+      input.value = searchQueryFromParams;
+      onSearchChange();
+    } else {
+      renderArt(artData);
+    }
   }, 2000);
+    loadingPage.classList.remove("artwork__loading-state--visible");
 }
 
 main();
@@ -36,16 +44,17 @@ function homePage() {
 }
 
 function filterArt(event) {
-  const type = event.target.value;
+    const type = event.target.value;
 
-  let filteredArr = searchResult;
+    let filteredArr = searchResult;
 
   if (searchResult.length === 0) return;
   if (type !== "All") {
     filteredArr = searchResult.filter((item) => {
-       return item.art_type === type;
+       return item.art_type  === type;
     });
   }
+
   if (filteredArr.length === 0) {
     noResults.classList += " no-results__page--visible";
     artworkListEl.innerHTML = "";
@@ -57,7 +66,12 @@ function filterArt(event) {
 }
 
 function onSearchChange(event) {
-  const name = event.target.value.toLowerCase();
+  let name = ""
+  if (!searchQueryFromParams) {
+    name = event.target.value.toLowerCase();
+  } else {
+    name = searchQueryFromParams.toLowerCase();
+  }
 
   searchResult = artData.filter(
     (item) =>
