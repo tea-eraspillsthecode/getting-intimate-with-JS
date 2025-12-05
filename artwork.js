@@ -67,9 +67,9 @@ function filterArt(event) {
 function onSearchChange(event) {
   let name = "";
   if (!searchQueryFromParams) {
-    name = event.target.value.toLowerCase().trim();
+    name = event.target.value.toLowerCase();
   } else {
-    name = searchQueryFromParams.toLowerCase().trim();
+    name = searchQueryFromParams.toLowerCase();
   }
 
   searchResult = artData.filter((item) => {
