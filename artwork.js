@@ -16,7 +16,6 @@ async function main() {
     }
 })
     artData = await art.json()
-
     
     setTimeout(() => {
         renderArt(artData)
@@ -36,6 +35,8 @@ function homePage() {
 }
 
 function filterArt(event) {
+    resetResults()
+    
     const type = event.target.value
 
     let filteredArr = artData
@@ -62,6 +63,11 @@ function onSearchChange(event) {
     else {
         noResults.classList.remove("no-results__page--visible")
     }
+}
+
+function resetResults() {
+    const noResults = document.querySelector(".no-results__page")
+    noResults.style.display = 'none'
 }
 
 function artHTML(art) {
