@@ -75,7 +75,7 @@ function onSearchChange(event) {
   searchResult = artData.filter((item) => {
     name = event.target.value.toLowerCase().trim();
 
-    return (item.name.toLowerCase().includes(name) || item.art_name.toLowerCase().includes(name));
+    item.name.toLowerCase().includes(name) || item.art_name.toLowerCase().includes(name);
   }
   );
 
