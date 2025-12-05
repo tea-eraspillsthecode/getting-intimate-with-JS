@@ -853,6 +853,14 @@ MOBILE RESPONSIVENESS
     .art__card {
         max-width: 100%;
     }
+
+    .footer__links {
+        display: none;
+    }
+
+    .footer__copyright {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 375px) {
@@ -895,13 +903,5 @@ MOBILE RESPONSIVENESS
 
     #filter {
         font-size: 18px;
-    }
-
-    .footer__links {
-        display: none;
-    }
-
-    .footer__copyright {
-        margin-top: 0;
     }
 }
