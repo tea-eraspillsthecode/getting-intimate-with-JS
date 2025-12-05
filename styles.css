@@ -81,7 +81,7 @@ NAVIGATION
 
 */
 
-#landing {
+#nav-one {
     background-color: rgb(245, 245, 245);
     height: 100px;
 }
@@ -209,12 +209,12 @@ LANDING PAGE
 
 */
 
-#welcome {
+#home {
     background-color: #658494;
     min-height: calc(100vh - 100px);
 }
 
-#welcome .header {
+#home .header {
     width: 100%;
     height: 100%;
     max-height: none;
@@ -282,7 +282,7 @@ LANDING PAGE
     margin-bottom: 24px;
 }
 
-.welcome-page__input {
+.home-page__input {
     font-size: 24px;
     border-radius: 10px;
     background-color: #fff;
@@ -305,11 +305,11 @@ LANDING PAGE
     }
 }
 
-.welcome-page__input:hover {
+.home-page__input:hover {
     border: 2px solid #754d3e;
 }
 
-.welcome-page__input::placeholder {
+.home-page__input::placeholder {
     font-size: 24px;
     color: rgba(128, 128, 128, 0.573);
     padding: 8px 0;
@@ -402,7 +402,7 @@ ART PAGE
     width: 100%;
 }
 
-#landing-two .fa-xmark {
+#nav-two .fa-xmark {
     color: #754d3e;
 }
 
@@ -415,7 +415,7 @@ ART PAGE
     color: #fff;
 }
 
-#landing-two .text--brown {
+#nav-two .text--brown {
     color: #fff;
 }
 
@@ -430,7 +430,7 @@ ART PAGE
     color: #fff;
 }
 
-#welcome-two .header__title {
+#welcome .header__title {
     color: #fff;
     font-size: 32px;
 }
@@ -724,7 +724,7 @@ MOBILE RESPONSIVENESS
         display: block;
     }
 
-    #landing-two .btn__menu {
+    #nav-two .btn__menu {
         color: #fff;
     }
 
@@ -760,7 +760,7 @@ MOBILE RESPONSIVENESS
         width: 70%;
     }
 
-    .welcome-page__input {
+    .home-page__input {
         font-size: 20px;
     }
 
@@ -795,7 +795,7 @@ MOBILE RESPONSIVENESS
         width: 75%;
     }
 
-    .welcome-page__input::placeholder {
+    .home-page__input::placeholder {
         font-size: 20px;
     }
 
@@ -819,7 +819,7 @@ MOBILE RESPONSIVENESS
         width: 100%;
     }
 
-    .welcome-page__input {
+    .home-page__input {
         margin-bottom: 12px;
     }
 
