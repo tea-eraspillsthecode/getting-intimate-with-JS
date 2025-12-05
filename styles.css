@@ -699,8 +699,7 @@ ART PAGE
 
 */
 
-#footer-primary,
-#footer-two {
+footer {
     background-color: #754d3e;
 }
 
@@ -718,6 +717,7 @@ ART PAGE
 }
 
 .footer__link--anchor {
+    width: 100%;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -895,5 +895,13 @@ MOBILE RESPONSIVENESS
 
     #filter {
         font-size: 18px;
+    }
+
+    .footer__links {
+        display: none;
+    }
+
+    .footer__copyright {
+        margin-top: 0;
     }
 }
