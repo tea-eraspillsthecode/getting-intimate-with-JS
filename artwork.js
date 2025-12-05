@@ -29,8 +29,8 @@ async function main() {
     } else {
       renderArt(artData);
     }
+  loadingPage.classList.remove("artwork__loading-state--visible");
   }, 2000);
-    loadingPage.classList.remove("artwork__loading-state--visible");
 }
 
 main();
@@ -44,14 +44,14 @@ function homePage() {
 }
 
 function filterArt(event) {
-    const type = event.target.value;
+  const type = event.target.value;
 
-    let filteredArr = searchResult;
+  let filteredArr = searchResult;
 
   if (searchResult.length === 0) return;
   if (type !== "All") {
     filteredArr = searchResult.filter((item) => {
-       return item.art_type  === type;
+      return item.art_type === type;
     });
   }
 
@@ -66,7 +66,7 @@ function filterArt(event) {
 }
 
 function onSearchChange(event) {
-  let name = ""
+  let name = "";
   if (!searchQueryFromParams) {
     name = event.target.value.toLowerCase();
   } else {
