@@ -58,8 +58,8 @@
                         <h2 class="header__sub-title">Discover the value of your favorite masterpieces with <span class="text--brown">Blathers' Burrow</span></h2>
                     </div>
                     <div class="input--wrapper">
-                        <input class="home-page__input" type="text" placeholder="Ex: Twinkling painting"></input>
-                        <button class="btn" onclick="loadingState()">
+                        <input class="home-page__input" type="text" placeholder="Ex: Twinkling painting" onchange="onSearchChange(event)"></input>
+                        <button class="btn" onclick="rerouteToArtworkPage()">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <div class="btn__overlay--loading">
                                 <i class="fa-solid fa-spinner"></i>
