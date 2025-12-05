@@ -65,21 +65,19 @@ function filterArt(event) {
 }
 
 function onSearchChange(event) {
-  let name = "";
-  if (!searchQueryFromParams) {
-    name = event.target.value.toLowerCase();
-  } else {
-    name = searchQueryFromParams.toLowerCase();
-  }
+  const name = searchQueryFromParams ? 
+  searchQueryFromParams.toLowerCase().trim() : 
+  event.target.value.toLowerCase().trim();
 
   searchResult = artData.filter((item) => {
-    name = event.target.value.toLowerCase().trim();
+    const itemName = item.name.toLowerCase();
+    const itemArtName = item.art_name.toLowerCase();
 
-    item.name.toLowerCase().includes(name) || item.art_name.toLowerCase().includes(name);
+    return(itemName.includes(name) || itemArtName.includes(name));
   }
-  );
+);
+    artworkListEl.innerHTML = searchResult.map((art) => artHTML(art)).join("");
 
-  artworkListEl.innerHTML = searchResult.map((art) => artHTML(art)).join("");
 
   if (searchResult.length === 0) {
     noResults.classList += " no-results__page--visible";
